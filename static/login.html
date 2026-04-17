@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="admin-body">
+    <main class="shell" style="max-width: 560px; padding-top: 64px;">
+      <section class="panel">
+        <span class="eyebrow">Admin Access</span>
+        <h1 style="font-size: clamp(2rem, 5vw, 3rem); margin-top: 18px;">Sign in to manage your Airbnb screens.</h1>
+        <p class="lede">Use the admin credentials for your hosted site. The guest display and Fire TV APIs stay public, but editing and pairing are protected.</p>
+
+        <div class="stack">
+          <div class="field">
+            <label for="username">Username</label>
+            <input id="username" type="text" autocomplete="username">
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="current-password">
+          </div>
+          <div class="toolbar">
+            <button class="primary-btn" id="loginBtn" type="button">Sign in</button>
+            <span class="status" id="loginStatus">Use the admin account configured on the server.</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/login.js"></script>
+  </body>
+</html>

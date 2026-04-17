@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.gradle/
+.gradle-user/
+.gradle-user-clean/
+.android-user/
+.tools/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+*.jks
+*.keystore
+data/app.db

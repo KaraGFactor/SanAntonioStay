@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fire TV Welcome</string>
+    <string name="setup_label">Initial setup</string>
+    <string name="setup_title">Connect this Fire TV to your Airbnb welcome server</string>
+    <string name="setup_copy">Enter the desktop admin server URL once. The TV will then register itself, show a pairing code, and wait for you to assign it from the desktop dashboard.</string>
+    <string name="server_url_hint">Server URL, for example http://192.168.1.20:8000</string>
+    <string name="save_and_pair">Save and pair</string>
+    <string name="pairing_label">Pair this TV</string>
+    <string name="pairing_title">Assign this Fire TV from the desktop dashboard</string>
+    <string name="pairing_copy">Enter code %1$s on the desktop admin site to link this TV to a property.</string>
+    <string name="pairing_waiting_copy">Registering this Fire TV and preparing a pairing code.</string>
+    <string name="restart_pairing">Generate a new pairing</string>
+    <string name="default_tv_name">Fire TV</string>
+    <string name="fire_tv_label">Guest welcome</string>
+    <string name="wifi_title">Wi-Fi</string>
+    <string name="check_in_title">Arrival and departure</string>
+    <string name="host_title">Need anything?</string>
+    <string name="house_notes_title">House notes</string>
+    <string name="edit_setup">Edit setup</string>
+    <string name="retry">Retry now</string>
+    <string name="greeting_format">Hello, %1$s</string>
+    <string name="default_occasion">Enjoy your stay</string>
+    <string name="default_message">Welcome. We hope you have a comfortable visit.</string>
+    <string name="load_failed">We could not load the active stay right now.</string>
+    <string name="server_only_validation_error">Enter the server URL first.</string>
+    <string name="no_house_notes">No house notes are configured yet.</string>
+</resources>

@@ -1,0 +1,78 @@
+{
+  "properties": [
+    {
+      "id": "lake-house",
+      "name": "Lake House Retreat",
+      "activeStayId": "stay-1001",
+      "headline": "A quiet place to exhale",
+      "address": "124 Shoreline Drive",
+      "wifiName": "LakeHouseGuest",
+      "wifiPassword": "Relax2026",
+      "checkInNote": "Check-in starts at 4:00 PM. The smart lock code is sent on the morning of arrival.",
+      "checkoutNote": "Checkout is at 10:00 AM. Please start the dishwasher and lock the door behind you.",
+      "houseTips": [
+        "Quiet hours begin at 10:00 PM.",
+        "Beach towels are in the hallway closet.",
+        "The thermostat tablet is mounted near the kitchen."
+      ],
+      "contactName": "Maya",
+      "contactPhone": "(312) 555-0198"
+    },
+    {
+      "id": "city-loft",
+      "name": "City Loft Stay",
+      "activeStayId": "stay-1002",
+      "headline": "Right in the middle of the neighborhood",
+      "address": "88 Market Street, Unit 4B",
+      "wifiName": "CityLoftWiFi",
+      "wifiPassword": "StayDowntown",
+      "checkInNote": "Self check-in begins at 3:00 PM. The entry guide is in your Airbnb messages.",
+      "checkoutNote": "Checkout is at 11:00 AM. Leave used towels in the bathroom hamper.",
+      "houseTips": [
+        "The building door auto-locks after 30 seconds.",
+        "Street parking is free after 6:00 PM.",
+        "A white noise machine is on the bedside table."
+      ],
+      "contactName": "Jordan",
+      "contactPhone": "(773) 555-0126"
+    }
+  ],
+  "stays": [
+    {
+      "id": "stay-1001",
+      "propertyId": "lake-house",
+      "guestName": "Olivia",
+      "guestCount": 4,
+      "arrivalDate": "2026-04-19",
+      "departureDate": "2026-04-23",
+      "occasion": "Family spring getaway",
+      "message": "We are so happy to host you. Make yourself at home and enjoy the water views."
+    },
+    {
+      "id": "stay-1002",
+      "propertyId": "city-loft",
+      "guestName": "Marcus",
+      "guestCount": 2,
+      "arrivalDate": "2026-04-20",
+      "departureDate": "2026-04-24",
+      "occasion": "Anniversary weekend",
+      "message": "Welcome to the loft. We hope you have a memorable and easy stay in the city."
+    }
+  ],
+  "tvDevices": [
+    {
+      "id": "tv-demo-lake",
+      "name": "Lobby Fire TV",
+      "pairingCode": "LAKE22",
+      "propertyId": "lake-house",
+      "status": "paired"
+    },
+    {
+      "id": "tv-demo-unpaired",
+      "name": "Spare Fire TV",
+      "pairingCode": "HELLO7",
+      "propertyId": "",
+      "status": "pending"
+    }
+  ]
+}

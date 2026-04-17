@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Airbnb Welcome Screen Admin</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="admin-body">
+    <main class="shell">
+      <section class="hero">
+        <article class="hero-card">
+          <div class="toolbar" style="justify-content: space-between; align-items: flex-start;">
+            <span class="eyebrow">Airbnb Welcome Screen</span>
+            <button class="ghost-btn" id="logoutBtn" type="button">Log out</button>
+          </div>
+          <h1>Manage a personalized guest greeting for every stay.</h1>
+          <p class="lede">
+            Update guest details on your desktop, then open the matching display link on an Amazon Fire tablet to show a clean, branded welcome screen in the home.
+          </p>
+          <ul class="hero-list">
+            <li><strong>Guest</strong><span id="heroGuest">Olivia</span></li>
+            <li><strong>Property</strong><span id="heroProperty">Lake House Retreat</span></li>
+            <li><strong>Visit</strong><span id="heroDates">Apr 19 - Apr 23</span></li>
+          </ul>
+        </article>
+
+        <aside class="tablet-frame">
+          <div class="tablet-screen">
+            <span class="eyebrow">Fire Tablet Preview</span>
+            <h2 class="welcome-name" id="previewName">Hello, Olivia</h2>
+            <p class="welcome-copy" id="previewMessage">
+              We are so happy to host you. Make yourself at home and enjoy the water views.
+            </p>
+            <div class="welcome-grid">
+              <div class="welcome-stat">
+                <strong>Stay</strong>
+                <span id="previewStay">Apr 19 - Apr 23</span>
+              </div>
+              <div class="welcome-stat">
+                <strong>Guests</strong>
+                <span id="previewGuestCount">4 guests</span>
+              </div>
+              <div class="welcome-stat">
+                <strong>Wi-Fi</strong>
+                <span id="previewWifi">LakeHouseGuest</span>
+              </div>
+              <div class="welcome-stat">
+                <strong>Host</strong>
+                <span id="previewHost">Maya</span>
+              </div>
+            </div>
+            <a class="preview-link" id="previewLink" href="/display.html?property=lake-house&stay=stay-1001" target="_blank" rel="noreferrer">Open live tablet view</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="layout">
+        <section class="panel">
+          <div class="toolbar">
+            <div class="field" style="min-width: 280px;">
+              <label for="staySelect">Select stay</label>
+              <select id="staySelect"></select>
+            </div>
+            <button class="secondary-btn" id="newStayBtn" type="button">Add sample stay</button>
+            <button class="secondary-btn" id="setActiveStayBtn" type="button">Show this stay on Fire TV</button>
+          </div>
+
+          <div class="stack">
+            <h2>Guest details</h2>
+            <div class="editor-grid">
+              <div class="field">
+                <label for="guestName">Guest name</label>
+                <input id="guestName" type="text">
+              </div>
+              <div class="field">
+                <label for="guestCount">Guest count</label>
+                <input id="guestCount" type="number" min="1">
+              </div>
+              <div class="field">
+                <label for="arrivalDate">Arrival date</label>
+                <input id="arrivalDate" type="date">
+              </div>
+              <div class="field">
+                <label for="departureDate">Departure date</label>
+                <input id="departureDate" type="date">
+              </div>
+              <div class="field">
+                <label for="occasion">Visit details</label>
+                <input id="occasion" type="text" placeholder="Birthday, work trip, family vacation...">
+              </div>
+              <div class="field">
+                <label for="propertySelect">Property</label>
+                <select id="propertySelect"></select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Welcome message</label>
+              <textarea id="message"></textarea>
+            </div>
+          </div>
+
+          <div class="stack">
+            <h2>Property details</h2>
+            <div class="editor-grid">
+              <div class="field">
+                <label for="propertyName">Property name</label>
+                <input id="propertyName" type="text">
+              </div>
+              <div class="field">
+                <label for="headline">Headline</label>
+                <input id="headline" type="text">
+              </div>
+              <div class="field">
+                <label for="address">Address</label>
+                <input id="address" type="text">
+              </div>
+              <div class="field">
+                <label for="contactName">Host/contact name</label>
+                <input id="contactName" type="text">
+              </div>
+              <div class="field">
+                <label for="contactPhone">Host/contact phone</label>
+                <input id="contactPhone" type="text">
+              </div>
+              <div class="field">
+                <label for="wifiName">Wi-Fi network</label>
+                <input id="wifiName" type="text">
+              </div>
+              <div class="field">
+                <label for="wifiPassword">Wi-Fi password</label>
+                <input id="wifiPassword" type="text">
+              </div>
+            </div>
+            <div class="field">
+              <label for="checkInNote">Check-in note</label>
+              <textarea id="checkInNote"></textarea>
+            </div>
+            <div class="field">
+              <label for="checkoutNote">Checkout note</label>
+              <textarea id="checkoutNote"></textarea>
+            </div>
+            <div class="field">
+              <label>House tips</label>
+              <div id="tipsEditor" class="tips-editor"></div>
+              <div class="inline-actions">
+                <button class="ghost-btn" id="addTipBtn" type="button">Add tip</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="toolbar">
+            <button class="primary-btn" id="saveBtn" type="button">Save changes</button>
+            <span class="status" id="saveStatus">Edits are local until you save.</span>
+          </div>
+        </section>
+
+        <aside class="panel">
+          <h2>How you would use this</h2>
+          <ul class="detail-list">
+            <li><strong>1</strong><span>Edit the reservation from your laptop.</span></li>
+            <li><strong>2</strong><span>Open the display link on the Fire tablet.</span></li>
+            <li><strong>3</strong><span>Leave the tablet in full-screen mode at the property.</span></li>
+          </ul>
+
+          <div class="stack">
+            <h3>Tablet display URL</h3>
+            <a class="preview-link" id="sidebarPreviewLink" href="#" target="_blank" rel="noreferrer">Open selected stay</a>
+          </div>
+
+          <div class="stack">
+            <h3>Fire TV feed</h3>
+            <p class="status" id="tvStatus">This property will show the selected active stay in the Fire TV app.</p>
+          </div>
+
+          <div class="stack">
+            <h3>Pair a Fire TV</h3>
+            <div class="field">
+              <label for="pairingCodeInput">Pairing code from TV</label>
+              <input id="pairingCodeInput" type="text" placeholder="Example: HELLO7">
+            </div>
+            <div class="field">
+              <label for="deviceNameInput">TV nickname</label>
+              <input id="deviceNameInput" type="text" placeholder="Living Room Fire TV">
+            </div>
+            <button class="primary-btn" id="pairDeviceBtn" type="button">Pair selected property</button>
+            <span class="status" id="pairStatus">Enter the code shown on the Fire TV screen.</span>
+          </div>
+
+          <div class="stack">
+            <h3>Registered TVs</h3>
+            <div id="deviceList" class="tips-list"></div>
+          </div>
+
+          <div class="stack">
+            <h3>Suggested fields for Airbnb</h3>
+            <ul class="tips-list">
+              <li>Guest name and number of guests</li>
+              <li>Arrival and departure dates</li>
+              <li>Wi-Fi credentials</li>
+              <li>Check-in and checkout reminders</li>
+              <li>Friendly local or house-specific notes</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="/admin.js"></script>
+  </body>
+</html>

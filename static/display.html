@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guest Welcome Screen</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="welcome-body">
+    <main class="display-shell">
+      <section class="display-card" id="displayCard" hidden>
+        <section class="display-main">
+          <div class="display-kicker" id="propertyHeadline">Airbnb stay</div>
+          <h1 class="display-title" id="guestGreeting">Hello, Guest</h1>
+          <p class="display-subtitle" id="propertyName">We are excited to welcome you.</p>
+
+          <div class="pill-row">
+            <div class="pill" id="stayDates">Apr 19 - Apr 23</div>
+            <div class="pill" id="guestCount">2 guests</div>
+            <div class="pill" id="occasion">Visit details</div>
+          </div>
+
+          <div class="message-card" id="messageCard"></div>
+        </section>
+
+        <aside class="display-side">
+          <div class="side-block">
+            <h2 class="side-title">Wi-Fi</h2>
+            <ul class="detail-list">
+              <li><strong>Network</strong><span id="wifiName">-</span></li>
+              <li><strong>Password</strong><span id="wifiPassword">-</span></li>
+            </ul>
+          </div>
+
+          <div class="side-block">
+            <h2 class="side-title">Arrival and Departure</h2>
+            <ul class="tips-list">
+              <li id="checkInNote">Check-in instructions go here.</li>
+              <li id="checkoutNote">Checkout reminders go here.</li>
+            </ul>
+          </div>
+
+          <div class="side-block">
+            <h2 class="side-title">House Notes</h2>
+            <ul class="tips-list" id="houseTips"></ul>
+          </div>
+
+          <div class="side-block">
+            <h2 class="side-title">Need anything?</h2>
+            <ul class="detail-list">
+              <li><strong>Host</strong><span id="contactName">-</span></li>
+              <li><strong>Phone</strong><span id="contactPhone">-</span></li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+      <section class="error-box" id="errorBox" hidden></section>
+    </main>
+
+    <script src="/display.js"></script>
+  </body>
+</html>

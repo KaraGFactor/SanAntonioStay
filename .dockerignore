@@ -1,0 +1,14 @@
+.git
+.android-user
+.gradle
+.gradle-user
+.gradle-user-clean
+.idea
+.tools
+__pycache__
+*.pyc
+app/build
+build
+local.properties
+*.jks
+*.keystore
